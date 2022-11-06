@@ -5,7 +5,7 @@ const template = require('art-template');
 const path = require("path");
 
 
-router.get('/download/:modName/:minecraftVersion/:modVersion', (req, res) => {
+router.get('/:modName/:minecraftVersion/:modVersion', (req, res) => {
     let param = req.params;
     let modName = param.modName
     let minecraftVersion = param.minecraftVersion
