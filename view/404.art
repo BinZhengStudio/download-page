@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>斌政工作室 | 下载中心</title>
+    <title>斌政工作室 | 404未找到模组</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5239242779426443"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -42,9 +42,7 @@
             <div class="google-col-box">广告位1</div>
             <div class="card p-5">
                 <div class="card-body">
-                    <p>下载：<b>{{data.fileName}}</b></p>
-                    <p>您的下载将在 <b class="second">5</b> 秒后开始</p>
-                    <p>如果没有自动开始下载，请<a target="_blank" href="{{data.download}}" download style="color: #005cbf;">点击此处</a></p>
+                    <p>404:未找到该模组</b></p>
                 </div>
             </div>
         </div>
@@ -60,7 +58,6 @@
 </body>
 <script src="/js/jquery-3.6.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/countdown.js"></script>
 <script>
     $('.menu-icon').click(()=>{
         $('.menu-gui').fadeIn();
