@@ -1,4 +1,5 @@
 window.onload = function () {
+    $('.download').hide()
     let future = new Date(new Date().getTime() + 5000)
     let interval = setInterval(function () {
         const second = $('.second');
