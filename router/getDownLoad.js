@@ -12,7 +12,7 @@ router.get('/download/:modName/:minecraftVersion/:modVersion',(req, res)=>{
     let minecraftVersion = param.minecraftVersion
     let modVersion = param.modVersion
     let fileName = `${modName}-${minecraftVersion}-${modVersion}.jar`;
-    let downLoadUrl = `https://mirror-name1.maven.bzgzs.cn/cn/bzgzs/${modName}/${modName}-${minecraftVersion}/${modVersion}/${fileName}`;
+    let downLoadUrl = `https://maven.bzgzs.cn/cn/bzgzs/${modName}/${modName}-${minecraftVersion}/${modVersion}/${fileName}`;
     axios.get(downLoadUrl).then(function (){
         let html = template(path.join(__dirname,"../view/index.art"),{
             data:{
@@ -21,7 +21,8 @@ router.get('/download/:modName/:minecraftVersion/:modVersion',(req, res)=>{
             }
         })
         res.send(html)
-    }).catch(() => {
+    }).catch((e) => {
+        console.log(e)
         let html = template(path.join(__dirname,"../view/404.art"),{
             data:{}
         })
