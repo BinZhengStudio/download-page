@@ -4,7 +4,9 @@ let router = express.Router();
 const template = require('art-template');
 const path = require("path");
 
-
+router.get('/test',function (req, res){
+    res.send("test")
+})
 router.get('/:modName/:minecraftVersion/:modVersion', (req, res) => {
     let param = req.params;
     let modName = param.modName
@@ -27,6 +29,9 @@ router.get('/:modName/:minecraftVersion/:modVersion', (req, res) => {
         res.statusCode = 404
         res.send(html)
     })
+})
+router.use(function (req, res, next) {
+    res.send(template(path.join(__dirname, "../view/404.art"),{data:{}}))
 })
 
 module.exports = router;
