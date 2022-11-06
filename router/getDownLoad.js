@@ -25,6 +25,7 @@ router.get('/download/:modName/:minecraftVersion/:modVersion',(req, res)=>{
         let html = template(path.join(__dirname,"../view/404.art"),{
             data:{}
         })
+        res.statusCode = 404
         res.send(html)
     })
 })
