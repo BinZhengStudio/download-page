@@ -1,6 +1,6 @@
 const express = require("express")
 const path = require('path');
-var router = require('./router/getDownLoad');
+var router = require('./router/getDownload');
 const app = express()
 
 app.use(router)
