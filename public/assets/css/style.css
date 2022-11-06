@@ -71,7 +71,7 @@ main {
 }
 
 .download-link.countdown-done {
-
+    display: block;
 }
 
 .google-box, .google-col-box {
