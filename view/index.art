@@ -44,7 +44,6 @@
                 <div class="card-body">
                     <p>下载：<b>{{data.fileName}}</b></p>
                     <p>您的下载将在 <b class="second">5</b> 秒后开始</p>
-                    <p class="downloadUrl">下载地址：{{data.download}}</p>
                     <p>如果没有自动开始下载，请<a target="_self" href="{{data.download}}" download style="color: #005cbf;">点击此处</a></p>
                 </div>
             </div>
