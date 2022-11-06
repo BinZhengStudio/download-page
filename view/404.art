@@ -19,7 +19,7 @@
                 <span>|</span>
                 <span class="badge badge-danger">下载中心</span>
             </div>
-            <img class="menu-icon" src="images/menu.png" width="32" height="32" alt="menu">
+            <img class="menu-icon" src="/images/menu.png" width="32" height="32" alt="menu">
             <nav>
                 <a class="active" href="#">首页</a>
                 <a href="#">成员</a>
