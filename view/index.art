@@ -47,7 +47,7 @@
 				<noscript>
 					<p>如果没有自动开始下载，请<a target="_self" href="{{data.download}}" download style="color: #005cbf;">点击此处</a></p>
 				</noscript>
-				<p class="download-link">如果没有自动开始下载，请<a target="_blank" href="{{data.download}}" download style="color: #005cbf;">点击此处</a></p>
+				<p class="download-link">如果没有自动开始下载，请<a target="_self" href="{{data.download}}" download style="color: #005cbf;">点击此处</a></p>
 			</div>
 		</div>
 	</div>
