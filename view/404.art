@@ -1,60 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>斌政工作室 | 404未找到模组</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5239242779426443"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>斌政工作室 | 404未找到模组</title>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5239242779426443"
+			crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="wrapper d-flex justify-content-between align-items-center">
-            <div class="title">
-                <a target="_blank" href="https://bzgzs.cn/"><h1>斌政工作室</h1></a>
-                <span>|</span>
-                <span class="badge badge-danger">下载中心</span>
-            </div>
-            <img class="menu-icon" src="images/menu.png" width="32" height="32" alt="menu">
-            <nav>
-                <a class="active" href="#">首页</a>
-                <a href="#">成员</a>
-                <a href="#">招募</a>
-            </nav>
-        </div>
-        <div class="position-fixed menu-gui" style="width: 100%;height: 100%;top: 0;left: 0; z-index: 99">
-            <div class="inner-box position-absolute" >
-                <a class="active" href="#">首页</a>
-                <a href="#">成员</a>
-                <a href="#">招募</a>
-            </div>
-            <div class="position-absolute zz" style="width: 100%;height: 100%;background: rgba(0,0,0,.5)">
+<header>
+	<div class="wrapper d-flex justify-content-between align-items-center">
+		<div class="title">
+			<a target="_blank" href="https://bzgzs.cn/"><h1>斌政工作室</h1></a>
+			<span>|</span>
+			<span class="badge badge-danger">下载中心</span>
+		</div>
+		<img class="menu-icon" src="images/menu.png" width="32" height="32" alt="menu">
+		<nav>
+			<a class="active" href="#">首页</a>
+			<a href="#">成员</a>
+			<a href="#">招募</a>
+		</nav>
+	</div>
+	<div class="position-fixed menu-gui" style="width: 100%;height: 100%;top: 0;left: 0; z-index: 99">
+		<div class="inner-box position-absolute" >
+			<a class="active" href="#">首页</a>
+			<a href="#">成员</a>
+			<a href="#">招募</a>
+		</div>
+		<div class="position-absolute zz" style="width: 100%;height: 100%;background: rgba(0,0,0,.5)">
 
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="wrapper">
-            <div class="google-col-box">广告位1</div>
-            <div class="card p-5">
-                <div class="card-body">
-                    <p>404:未找到该模组</p>
-                </div>
-            </div>
-        </div>
-        <div class="google-wrapper l-0">
-            <div class="google-box">广告位1</div>
-            <div class="google-box">广告位2</div>
-        </div>
-        <div class="google-wrapper r-0">
-            <div class="google-box">广告位1</div>
-            <div class="google-box">广告位2</div>
-        </div>
-    </main>
+		</div>
+	</div>
+</header>
+<main>
+	<div class="wrapper">
+		<div class="google-col-box">广告位1</div>
+		<div class="card p-5">
+			<div class="card-body">
+				<p>404:未找到该文件</p>
+			</div>
+		</div>
+	</div>
+	<div class="google-wrapper l-0">
+		<div class="google-box">广告位1</div>
+		<div class="google-box">广告位2</div>
+	</div>
+	<div class="google-wrapper r-0">
+		<div class="google-box">广告位1</div>
+		<div class="google-box">广告位2</div>
+	</div>
+</main>
 </body>
 <script src="/js/jquery-3.6.1.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

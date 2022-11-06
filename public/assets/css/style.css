@@ -1,29 +1,35 @@
-*{
-    font-family: Serif;
+* {
+    font-family: serif;
     text-align: center;
     color: #333;
 }
-.wrapper{
+
+.wrapper {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
-.menu-icon{
+
+.menu-icon {
     display: none;
 }
-header{
+
+header {
     padding: 0 30px;
-    box-shadow: 0 0 22px rgba(0,0,0,.1);
+    box-shadow: 0 0 22px rgba(0, 0, 0, .1);
 }
-header .title h1{
+
+header .title h1 {
     display: inline-block;
     line-height: 60px;
     font-size: 28px;
 }
-header .title .badge{
+
+header .title .badge {
     font-size: 14px;
 }
-header nav a{
+
+header nav a {
     font-family: "Microsoft Tai Le";
     display: inline-block;
     width: 70px;
@@ -31,30 +37,44 @@ header nav a{
     margin: 0 8px;
     font-size: 14px;
 }
-header nav a.active{
+
+header nav a.active {
     border-bottom: 2px solid #333;
     font-weight: bold;
 }
-header nav a:hover{
+
+header nav a:hover {
     color: #333;
     border-bottom: 2px solid #333;
     font-weight: bold;
 }
-a{
-    color: inherit;
 
+a {
+    color: inherit;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
-.google-wrapper{
+
+.google-wrapper {
     top: 15%;
     position: fixed;
 }
-main{
+
+main {
     padding-top: 30px;
 }
-.google-box,.google-col-box{
+
+.download-link {
+    display: none;
+}
+
+.download-link.countdown-done {
+
+}
+
+.google-box, .google-col-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,53 +82,65 @@ main{
     background: black;
     color: white;
 }
-.google-col-box{
+
+.google-col-box {
     width: 100%;
     height: 100px;
 }
-.google-box{
+
+.google-box {
     width: 180px;
     height: 350px;
 }
-.l-0{
+
+.l-0 {
     left: 30px;
 }
-.r-0{
+
+.r-0 {
     right: 30px;
 }
-.menu-gui{
+
+.menu-gui {
     display: none;
 }
-.menu-gui .inner-box{
+
+.menu-gui .inner-box {
     height: 100%;
     width: 200px;
     background: white;
     z-index: 99999;
     padding: 20px 30px;
 }
-.menu-gui .inner-box a.active{
+
+.menu-gui .inner-box a.active {
     border-bottom: 1px solid #333;
     font-weight: bold;
 }
-.menu-gui .inner-box a:hover{
+
+.menu-gui .inner-box a:hover {
     color: inherit;
     border-bottom: 1px solid #333;
     font-weight: bold;
 }
-.menu-gui .inner-box a{
+
+.menu-gui .inner-box a {
     font-size: 14px;
     line-height: 60px;
     display: block;
     margin-bottom: 20px;
 }
+
 @media screen and (max-width: 768px) {
-    nav{
+    nav {
         display: none;
     }
-    .menu-icon{
+
+    .menu-icon {
         display: unset;
     }
-    header .wrapper{
-        text-align: center!important;
+
+    header .wrapper {
+        text-align: center !important;
     }
 }
