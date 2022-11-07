@@ -30,8 +30,5 @@ router.get('/:modName/:minecraftVersion/:modVersion', (req, res) => {
         res.send(html)
     })
 })
-router.use(function (req, res, next) {
-    res.send(template(path.join(__dirname, "../view/404.art"),{data:{}}))
-})
 
 module.exports = router;
