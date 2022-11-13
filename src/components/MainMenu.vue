@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink} from 'vue-router'
+</script>
+
 <template>
   <header id="main-menu" role="banner">
     <div class="wrapper m-72em at-center d-flex justify-content-between align-items-center">
@@ -10,7 +14,7 @@
       </button>
       <nav :class="[{'button-on': active}]">
         <ul id="menu-items">
-          <li><a target="_blank" href="https://dl.bzgzs.cn/">首页</a></li>
+          <li><RouterLink to="/">首页</RouterLink></li>
           <li><a target="_blank" href="https://bzgzs.cn/">访问官网</a></li>
         </ul>
       </nav>
