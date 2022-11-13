@@ -3,6 +3,6 @@
 
 <template>
   <main>
-    <h1>斌政工作室</h1>
+    <p>开发中</p>
   </main>
 </template>

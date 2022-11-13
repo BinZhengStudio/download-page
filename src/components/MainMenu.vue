@@ -1,21 +1,17 @@
 <template>
   <header id="main-menu" role="banner">
-    <div class="wrapper max-72em at-center d-flex justify-content-between align-items-center">
+    <div class="wrapper m-72em at-center d-flex justify-content-between align-items-center">
       <div class="d-flex justify-content-between align-items-center">
         <h1><a target="_blank" href="https://bzgzs.cn/">斌政工作室</a></h1>
         <h4>下载中心 | Download Center</h4>
       </div>
-      <!--        <span>|</span>-->
-      <!--        <span class="badge badge-danger">下载中心</span>-->
       <button class="top-menu-button" v-on:click="buttonClick" aria-controls="top-menu" :aria-expanded="active">
         菜单 | Menu
       </button>
       <nav :class="[{'button-on': active}]">
         <ul id="menu-items">
-          <!--TODO-->
-          <li><a href="#">首页</a></li>
-          <li><a href="#">成员</a></li>
-          <li><a href="#">招募</a></li>
+          <li><a target="_blank" href="https://dl.bzgzs.cn/">首页</a></li>
+          <li><a target="_blank" href="https://bzgzs.cn/">访问官网</a></li>
         </ul>
       </nav>
     </div>
@@ -41,12 +37,7 @@ export default {
 <style scoped>
 #main-menu {
   padding: 0.3rem 2rem;
-  border-bottom: 1px solid black;
-  /*position: fixed;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*top: 0;*/
-  /*TODO*/
+  border-bottom: 2px solid #808080;
 }
 
 #main-menu h1, h4 {
@@ -115,11 +106,11 @@ export default {
   }
 
   #main-menu nav li {
-    border-top: 1px solid rgba(0, 0, 0, 0.34);
+    border-top: 1px solid #A0A0A0;
   }
 
   #main-menu nav li:last-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.34);
+    border-bottom: 1px solid #A0A0A0;
   }
 
   #main-menu nav.button-on {
