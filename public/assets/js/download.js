@@ -7,7 +7,7 @@
         if (future.getSeconds() - new Date().getSeconds() <= 0) {
             time.text(0);
             clearInterval(interval);
-            // link.click();
+            link.click();
             $(download_link).toggleClass("done");
             return;
         }

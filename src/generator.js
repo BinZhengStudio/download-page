@@ -1,30 +1,48 @@
 const template = require('art-template');
 const fs = require('fs');
+const path = require("path");
 
-const writeFileRecursive = function(path, buffer, callback){
-    let lastPath = path.substring(0, path.lastIndexOf("/"));
-    fs.mkdir(lastPath, {recursive: true}, (err) => {
-        if (err) return callback(err);
-        fs.writeFile(path, buffer, function(err){
-            if (err) return callback(err);
-            return callback(null);
-        });
+function genMainPage() {
+    let html = template(path.join(__dirname, "../view/index.html"), {})
+    fs.mkdir(`build/`, {recursive: true}, () => {
+        fs.writeFile(`build/index.html`, html, err => {
+            if (err) console.log(err);
+        })
     });
 }
 
-function generateStatic(version) {
+function genVersion(modName, mcVersion, modVersion) {
     const path = require('path')
-    let html = template(path.join(__dirname, "../view/index.html"), {
-        file: "test",
-        url: "test"
+    let file = `${modName}-${mcVersion}-${modVersion}.jar`;
+    let url = `https://maven.bzgzs.cn/cn/bzgzs/${modName}/${modName}-${mcVersion}/${modVersion}/${file}`;
+    let html = template(path.join(__dirname, "../view/download.html"), {
+        file: file,
+        url: url
     })
-    fs.mkdir(`build/test/${version}`, {recursive: true}, () => {
-        fs.writeFile(`build/test/${version}/index.html`, html, err => {
+    fs.mkdir(`build/${modName}/${mcVersion}/${modVersion}`, {recursive: true}, () => {
+        fs.writeFile(`build/${modName}/${mcVersion}/${modVersion}/index.html`, html, err => {
+            if (err) console.log(err);
+        })
+    });
+}
+
+function genLatest(modName, mcVersion, modVersion) {
+    const path = require('path')
+    let file = `${modName}-${mcVersion}-${modVersion}.jar`;
+    let url = `https://maven.bzgzs.cn/cn/bzgzs/${modName}/${modName}-${mcVersion}/${modVersion}/${file}`;
+    let html = template(path.join(__dirname, "../view/download.html"), {
+        file: file,
+        url: url
+    })
+    fs.mkdir(`build/${modName}/${mcVersion}/latest`, {recursive: true}, () => {
+        fs.writeFile(`build/${modName}/${mcVersion}/latest/index.html`, html, err => {
             if (err) console.log(err);
         })
     });
 }
 
 module.exports = {
-    generateStatic
+    genMainPage,
+    genVersion,
+    genLatest
 }
