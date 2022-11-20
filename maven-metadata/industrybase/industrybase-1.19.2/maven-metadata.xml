@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-    <groupId>cn.bzgzs.industrybase</groupId>
-    <artifactId>industrybase-1.19.2</artifactId>
-    <versioning>
-        <latest>SNAPSHOT-M19D01</latest>
-        <release>SNAPSHOT-M19D01</release>
-        <versions>
-            <version>SNAPSHOT-M19D01</version>
-        </versions>
-        <lastUpdated>20221029061545</lastUpdated>
-    </versioning>
+  <groupId>cn.bzgzs.industrybase</groupId>
+  <artifactId>industrybase-1.19.2</artifactId>
+  <versioning>
+    <latest>SNAPSHOT-M19D02</latest>
+    <release>SNAPSHOT-M19D02</release>
+    <versions>
+      <version>SNAPSHOT-M19D01</version>
+      <version>SNAPSHOT-M19D02</version>
+    </versions>
+    <lastUpdated>20221120085524</lastUpdated>
+  </versioning>
 </metadata>
