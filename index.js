@@ -18,7 +18,6 @@ function forEachDir(fromDir, callback) {
 forEachDir('maven-metadata', function (filePath) {
     console.log(filePath);
     generator.genMainPage();
-    fs_extra.copy('public/', 'build/')
     fs.readFile(filePath, (err, data) => {
         parser.parseString(data, (e, res) => {
             let artifactId = res.metadata.artifactId[0].split('-');
@@ -28,4 +27,5 @@ forEachDir('maven-metadata', function (filePath) {
             generator.genLatest(artifactId[0], artifactId[1], res.metadata.versioning[0].latest[0])
         })
     })
+    fs_extra.copy('public/', 'build/')
 });
