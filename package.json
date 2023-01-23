@@ -2,15 +2,17 @@
   "name": "download-page",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build.js",
   "scripts": {
-    "build": "node index.js",
-    "preview": "node preview.js"
+    "build": "node build.js",
+    "preview": "node preview.js",
+    "dev": "node dev.js"
   },
   "dependencies": {
     "art-template": "^4.13.2",
     "fs-extra": "^10.1.0",
-    "xml2js": "^0.4.23"
+    "xml2js": "^0.4.23",
+    "express": "^4.18.2"
   },
   "keywords": [],
   "author": "",

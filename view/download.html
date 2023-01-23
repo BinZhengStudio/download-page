@@ -1,14 +1,65 @@
-<div class="panel p-1em m-32em at-center">
-	<p>下载：<b>{{ file }}</b><br>
-		Download：<b>{{ file }}</b></p>
-	<p>您的下载将在 <b class="time">5</b> 秒后开始<br>
-		Your download will start in <b class="time">5</b> seconds.</p>
-	<noscript>
-		<p class="download-link done">如果没有自动开始下载，请 <a target="_self" href="{{url}}" download>点击此处</a>。<br>If the
-			download does not start automatically, please <a target="_self" href="{{url}}" download>click here</a>.</p>
-	</noscript>
-	<p class="download-link {'done': done}">如果没有自动开始下载，请 <a target="_self" href="{{url}}"
-															download>点击此处</a>。<br>
-		If the download does not start automatically, please <a target="_self" href="{{url}}" download>click here</a>.
-	</p>
-</div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<title>斌政工作室 | 下载中心</title>
+	<link rel="stylesheet" href="/assets/css/style.min.css">
+	<link rel="stylesheet" href="/assets/css/download.min.css">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5239242779426443"
+			crossorigin="anonymous"></script>
+	<link rel="icon" href="https://bzgzs.cn/wp-content/uploads/2022/07/cropped-logo-1-32x32.png" sizes="32x32">
+	<link rel="icon" href="https://bzgzs.cn/wp-content/uploads/2022/07/cropped-logo-1-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="https://bzgzs.cn/wp-content/uploads/2022/07/cropped-logo-1-180x180.png">
+	<meta name="msapplication-TileImage"
+		  content="https://bzgzs.cn/wp-content/uploads/2022/07/cropped-logo-1-270x270.png">
+</head>
+<body>
+<header id="main-menu" role="banner">
+	<div class="wrapper m-72em at-center d-flex justify-content-between align-items-center">
+		<div class="site-branding d-flex justify-content-between align-items-center">
+			<h1><a target="_blank" href="https://bzgzs.cn/">斌政工作室</a></h1>
+			<h4>下载中心 | Download Center</h4>
+		</div>
+		<button class="top-menu-button" aria-controls="top-menu">
+			菜单 | Menu
+		</button>
+		<nav class="menu-items">
+			<ul>
+				<li><a href="/">首页</a></li>
+				<li><a target="_blank" href="https://bzgzs.cn/">访问官网</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<main>
+	<div class="panel p-1em m-32em at-center">
+		<p>下载：<b>{{ file }}</b><br>
+			Download：<b>{{ file }}</b></p>
+		<p>您的下载将在 <b class="time">5</b> 秒后开始<br>
+			Your download will start in <b class="time">5</b> seconds.</p>
+		<noscript>
+			<p>自动选择下载站点失败，请手动选择。该功能需要 JavaScript。<br>
+				Automatic selection of download site failed, please select manually. This feature requires JavaScript.
+			</p>
+			<ul class="sites">
+				<li>主站点 | Main</li>
+				<li>香港站点 | Hong Kong</li>
+			</ul>
+		</noscript>
+		<p id="failed">所有下载站点均无法连接，可能您的网络异常。如果您已确认您的网络通畅，可手动选择下载站点。<br>
+			All download sites cannot be connected, maybe your network is abnormal. If you have confirmed that your
+			network is ok, you can manually select the download site.</p>
+		<ul id="selected" class="sites"></ul>
+		<ul id="optional" class="sites"></ul>
+	</div>
+</main>
+</body>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="https://bzgzs.cn/wp-content/themes/wordpress-theme/assets/js/main-menu.min.js"></script>
+<script src="/assets/js/download.min.js"></script>
+<script type="text/javascript">
+	start(jQuery, "{{url}}");
+</script>
+</html>

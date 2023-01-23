@@ -1,7 +1,31 @@
-.download-link {
+#failed {
     display: none;
 }
 
-.download-link.done {
+.sites {
+    display: none;
+    padding: 0.8em;
+    background-color: #dddddd;
+    border-radius: 0.8em;
+}
+
+.sites li {
     display: block;
+}
+
+.sites a {
+    display: block;
+    width: calc(100% - 1rem);
+    padding: 0.5em;
+    border-radius: 0.8em;
+    color: darkred;
+    border: none;
+}
+
+.sites li.ok a {
+    color: #005000;
+}
+
+.sites a:hover {
+    background-color: #bbbbbb;
 }
