@@ -59,15 +59,14 @@ function appendSite($, url) {
 			site.classList.add("ok"); // 添加类
 			selected.appendChild(site); // 添加元素到列表
 			hasSelected = true;
-			$(selected).fadeIn();
 			$(link)[0].click();
 		} else {
 			const option = document.createElement('li');
 			option.appendChild(link);
 			if (connectivity[index]) option.classList.add("ok");
 			optional.appendChild(option);
-			$(optional).fadeIn();
 		}
 	})
 	if (!hasSelected) $(document.getElementById("failed")).fadeIn(); // 若没有站点选中，则显示告示
+	$(document.getElementById("sites")).fadeIn();
 }

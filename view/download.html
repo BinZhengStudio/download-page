@@ -43,16 +43,21 @@
 			<p>自动选择下载站点失败，请手动选择。该功能需要 JavaScript。<br>
 				Automatic selection of download site failed, please select manually. This feature requires JavaScript.
 			</p>
+			<h3>可选下载站点 | Download Sites</h3>
 			<ul class="sites">
-				<li>主站点 | Main</li>
-				<li>香港站点 | Hong Kong</li>
+				<li><a target="_self" href="https://maven.bzgzs.cn{{url}}">主站点 | Main</a></li>
+				<li><a target="_self" href="https://hongkong.maven.bzgzs.cn{{url}}">香港站点 | Hong Kong</a></li>
 			</ul>
 		</noscript>
 		<p id="failed">所有下载站点均无法连接，可能您的网络异常。如果您已确认您的网络通畅，可手动选择下载站点。<br>
 			All download sites cannot be connected, maybe your network is abnormal. If you have confirmed that your
 			network is ok, you can manually select the download site.</p>
-		<ul id="selected" class="sites"></ul>
-		<ul id="optional" class="sites"></ul>
+		<div id="sites">
+			<h3>当前选择站点 | Selected Download Site</h3>
+			<ul id="selected" class="sites"></ul>
+			<h3>可选下载站点 | Optional Download Site(s)</h3>
+			<ul id="optional" class="sites"></ul>
+		</div>
 	</div>
 </main>
 </body>
