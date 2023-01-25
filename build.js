@@ -30,8 +30,8 @@ function build() {
                 generator.genLatest(artifactId[0], artifactId[1], versioning.latest[0]) // 生成最新版本下载页
             })
         })
-        fs_extra.copy('public/', 'build/') // 复制 css 与 js 资源
     });
+    fs_extra.copy('public/', 'build/') // 复制 css 与 js 资源
 }
 
 build(); // 构建静态页面
