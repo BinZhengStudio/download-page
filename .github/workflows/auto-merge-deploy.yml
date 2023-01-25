@@ -1,0 +1,88 @@
+name: '自动分支合并'
+on:
+  push:
+    branches: [ "dev" ]
+  delete:
+    branches: [ "dev" ]
+jobs:
+  test-commit:
+    name: '测试提交'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: '初始化 Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: '检出仓库'
+        uses: actions/checkout@v3
+        with:
+          ref: dev
+      - name: '测试提交'
+        run: |
+          npm ci
+          npm test
+  merge:
+    needs: test-commit
+    name: '合并分支'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: '获取 GitHub App Token'
+        uses: tibdex/github-app-token@v1
+        id: github-app-token
+        with:
+          app_id: ${{ secrets.XIANGBING_BOT_ID }}
+          private_key: ${{ secrets.XIANGBING_BOT_PRIVATE_KEY }}
+      - name: '检出仓库'
+        uses: actions/checkout@v3
+        with:
+          ref: master
+          token: ${{ steps.github-app-token.outputs.token }}
+      - name: '合并提交'
+        run: |
+          git config --global user.name 'xiangbing-bot'; git config --global user.email 'xiangbing@bzgzs.cn'
+          git fetch --depth 1 origin dev:dev
+          git reset --hard dev
+          git push -f origin master
+  sync:
+    needs: merge
+    name: '同步仓库'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: '检出仓库'
+        uses: actions/checkout@v1
+      - name: '同步到仓库'
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            ${{ secrets.REPO }}
+          ssh_private_key:
+            ${{ secrets.PRIVATE_KEY }}
+  deploy:
+    needs: merge
+    name: '部署到 GitHub Pages'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: '初始化 Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: '检出仓库'
+        uses: actions/checkout@v3
+        with:
+          ref: master
+      - name: '构建静态文件'
+        run: |
+          npm ci
+          npm run build
+      - name: '初始化 Pages'
+        uses: actions/configure-pages@v2
+      - name: '上传文件'
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './build'
+      - name: '部署'
+        id: deployment
+        uses: actions/deploy-pages@v1

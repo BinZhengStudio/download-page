@@ -2,6 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const path = require('path');
 const http = require('http');
+require('./build');
 
 const server = http.createServer(function (request, response) {
     console.log(request.method + ': ' + request.url);
@@ -10,7 +11,6 @@ const server = http.createServer(function (request, response) {
     fs.stat(filepath, function (err, stats) {
         if (!err) {
             if (stats.isFile()) {
-                response.writeHead(200);
                 fs.createReadStream(filepath).pipe(response);
             } else if (stats.isDirectory()) {
                 let index = path.join(filepath, 'index.html');
@@ -20,7 +20,6 @@ const server = http.createServer(function (request, response) {
                         response.end('404 Not Found');
                         return;
                     }
-                    response.writeHead(200);
                     fs.createReadStream(index).pipe(response);
                 })
             } else {
