@@ -38,6 +38,10 @@ p {
 	word-break: break-word;
 }
 
+b {
+	font-family: serif;
+}
+
 main {
 	padding: 1rem;
 }
