@@ -1,11 +1,11 @@
 const sites = [
 	'https://maven.bzgzs.cn',
-	'https://hongkong.maven.bzgzs.cn'
+	'https://b.maven.bzgzs.cn'
 ];
 
 const names = [
 	'主站点 | Main',
-	'香港站点 | Hong Kong'
+	'备用站点 | Backup'
 ];
 
 const connectivity = [
